@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:market_reach/core/constants/app_colors.dart';
 import 'package:market_reach/features/auth/signup/signup_screen.dart';
+import 'package:market_reach/features/market/homePage.dart';
 
 
 class LoginPage extends StatelessWidget {
@@ -64,7 +65,13 @@ class LoginPage extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    // TODO: Add login logic
+                   
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) =>  HomePage()),
+                      );
+                    
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.primaryTeal,
